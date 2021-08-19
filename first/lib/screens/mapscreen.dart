@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:first/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:maps_launcher/maps_launcher.dart';
 
 
 
@@ -16,7 +17,7 @@ class MapSample extends StatefulWidget {
 class MapSampleState extends State<MapSample> {
   Completer<GoogleMapController> _controller = Completer();
 
-  CameraPosition initLocation;
+  late CameraPosition initLocation;
 
   static final CameraPosition _kLake = CameraPosition(
       target: LatLng(37.43296265331129, -122.08832357078792),
